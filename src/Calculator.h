@@ -1,5 +1,9 @@
 #pragma once
 #include <AppCore/AppCore.h>
+#include <AppCore/Window.h>
+#include <AppCore/Overlay.h>
+#include <AppCore/JSHelpers.h>
+#include "Math.h"
 
 using namespace ultralight;
 
@@ -7,6 +11,8 @@ class Calculator : public AppListener,
               public WindowListener,
               public LoadListener,
               public ViewListener {
+private:
+  Math math;
 public:
   Calculator();
 

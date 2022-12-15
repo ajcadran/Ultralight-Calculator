@@ -13,43 +13,43 @@
 
 <body>
     <div class="calculator-wrapper">
-        <div class="calculator-body">
+        <section class="screen">0</section>
+
+        <section class="calculator-buttons">
             <div class="calculator-row">
-                <div class="screen">0</div>
+                <div class="calc-btn double">C</div>
+                <div class="calc-btn">&larr;</div>
+                <div class="calc-btn">÷</div>
             </div>
     
             <div class="calculator-row">
-                <div class="calculator-btn double">C</div>
-                <div class="calculator-btn">&larr;</div>
-                <div class="calculator-btn">÷</div>
+                <div class="calc-btn">7</div>
+                <div class="calc-btn">8</div>
+                <div class="calc-btn">9</div>
+                <div class="calc-btn">×</div>
             </div>
     
             <div class="calculator-row">
-                <div class="calculator-btn">7</div>
-                <div class="calculator-btn">8</div>
-                <div class="calculator-btn">9</div>
-                <div class="calculator-btn">×</div>
+                <div class="calc-btn">4</div>
+                <div class="calc-btn">5</div>
+                <div class="calc-btn">6</div>
+                <div class="calc-btn">−</div>
             </div>
     
             <div class="calculator-row">
-                <div class="calculator-btn">4</div>
-                <div class="calculator-btn">5</div>
-                <div class="calculator-btn">6</div>
-                <div class="calculator-btn">−</div>
+                <div class="calc-btn">1</div>
+                <div class="calc-btn">2</div>
+                <div class="calc-btn">3</div>
+                <div class="calc-btn">+</div>
             </div>
     
             <div class="calculator-row">
-                <div class="calculator-btn">1</div>
-                <div class="calculator-btn">2</div>
-                <div class="calculator-btn">3</div>
-                <div class="calculator-btn">+</div>
+                <div class="calc-btn triple">0</div>
+                <div class="calc-btn">=</div>
             </div>
-    
-            <div class="calculator-row">
-                <div class="calculator-btn triple">0</div>
-                <div class="calculator-btn">=</div>
-            </div>
-        </div>
+        </section>
     </div>
+
+    <script src="app.js" onload="init()"></script>
 </body>
 </html>
