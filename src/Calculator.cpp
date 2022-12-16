@@ -59,6 +59,8 @@ Calculator::Calculator()
     /// View's OnChangeCursor and OnChangeTitle events below.
     ///
     overlay_->view()->set_view_listener(this);
+
+    //Platform::instance().set_logger(new MyLogger());
 }
 
 Calculator::~Calculator() {}
@@ -100,15 +102,13 @@ void Calculator::OnFinishLoading(ultralight::View *caller,
 void Calculator::OnDOMReady(ultralight::View *caller,
                             uint64_t frame_id,
                             bool is_main_frame,
-                            const String &url) {
-    // Get JS Context           
+                            const String &url) {      
     RefPtr<JSContext> context = caller->LockJSContext();
     SetJSContext(context->ctx());
     JSObject global = JSGlobalObject();
 
-    // Bind C++ Function to JS
-    global["onButtonClick"] = (JSCallbackWithRetval)std::bind(&Math::onButtonClick, math, std::placeholders::_1, std::placeholders::_2);
-    //global["onButtonClick"] = math.BindJSFunction(&Math::onButtonClick);
+    global["onButtonClick"] = (JSCallbackWithRetval)std::bind(&MathHandler::onButtonClick, mathHandler, std::placeholders::_1, std::placeholders::_2, caller); //, overlay_);
+    //global["onButtonClick"] = BindJSCallbackWithRetval(&Calculator::onButtonClick);
 }
 
 void Calculator::OnChangeCursor(ultralight::View *caller,
