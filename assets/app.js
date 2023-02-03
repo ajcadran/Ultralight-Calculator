@@ -24,16 +24,11 @@ function buttonClick(value) {
     
 
     var message = onButtonClick(symbol);
-    document.querySelector('.screen').innerHTML = message;
+    //document.querySelector('.screen').innerHTML = message;
 }
 
 function printScreen(msg) {
     document.querySelector('.screen').innerHTML = msg;
-}
-
-// DEBUG
-function debugPrint(msg) {
-    document.querySelectorAll('.screen')[1].innerHTML = msg;
 }
 
 function init() {
