@@ -107,8 +107,7 @@ void Calculator::OnDOMReady(ultralight::View *caller,
     SetJSContext(context->ctx());
     JSObject global = JSGlobalObject();
 
-    global["onButtonClick"] = (JSCallbackWithRetval)std::bind(&MathHandler::onButtonClick, mathHandler, std::placeholders::_1, std::placeholders::_2, caller); //, overlay_);
-    //global["onButtonClick"] = BindJSCallbackWithRetval(&Calculator::onButtonClick);
+    global["onButtonClick"] = (JSCallbackWithRetval)std::bind(&MathHandler::onButtonClick, mathHandler, std::placeholders::_1, std::placeholders::_2, caller);
 }
 
 void Calculator::OnChangeCursor(ultralight::View *caller,

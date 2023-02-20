@@ -14,9 +14,5 @@ class AppHelper
 {
 public:
     AppHelper();
-    static void sendMsg(const JSChar *msg, const char *function, ultralight::View* _caller);
-    static void printDebugMsg(const JSChar *msg, ultralight::View *_caller);
-    static void printDebugMsg(const std::wstring msg, ultralight::View *_caller);
-    static void printDebugMsg(const float num, ultralight::View *_caller);
+    static void sendMsg(const JSChar* msg, const char* function, ultralight::View* _caller);
 };
-

@@ -24,17 +24,17 @@ private:
 
 public:
     MathHandler();
-    JSValueRef onButtonClick(const JSObject& thisObject, const JSArgs& args, ultralight::View *caller);
+    JSValueRef onButtonClick(const JSObject& thisObject, const JSArgs& args, ultralight::View* caller);
     void handleSymbol(const JSChar* symbol);
     void handleMath(const JSChar* symbol);
     void flushOperation(float floatBuffer);
     void handleNumber(const int number);
-    //const char* wstringToChar(const std::wstring wstr);
 
     // Getters and Setters
     float getRunningTotal() const;
     void setRunningTotal(float total);
     std::string getBuffer() const;
+    JSChar getBufferJS() const;
     std::wstring getBufferW() const;
     void setBuffer(std::string buffer);
     char getPreviousOperator() const;

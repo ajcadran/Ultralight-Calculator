@@ -7,6 +7,8 @@ set(SOURCES "src/Calculator.h"
             "src/Calculator.cpp"
             "src/main.cpp"
             "src/MathHandler.h"
-            "src/MathHandler.cpp")
+            "src/MathHandler.cpp"
+            "src/AppHelper.h"
+            "src/AppHelper.cpp")
 
 add_app("${SOURCES}")

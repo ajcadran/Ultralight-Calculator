@@ -32,7 +32,8 @@ function printScreen(msg) {
 }
 
 function init() {
-    document.querySelector('.calculator-wrapper').addEventListener('click', function(event) {
-        buttonClick(event.target);
+    const btns = document.querySelectorAll('.calc-btn');
+    btns.forEach((btn) => {
+        btn.addEventListener('click', function(event) { buttonClick(event.target); })
     });
 }
