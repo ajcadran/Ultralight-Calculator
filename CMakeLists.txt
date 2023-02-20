@@ -5,6 +5,8 @@ include(cmake/App.cmake)
 
 set(SOURCES "src/Calculator.h"
             "src/Calculator.cpp"
-            "src/main.cpp")
+            "src/main.cpp"
+            "src/MathHandler.h"
+            "src/MathHandler.cpp")
 
 add_app("${SOURCES}")
